@@ -6,5 +6,12 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind()],
-  output: "hybrid"
+  i18n: {
+    defaultLocale: "ca",
+    locales: ["es", "en", "ca"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+  output: "hybrid",
 });
