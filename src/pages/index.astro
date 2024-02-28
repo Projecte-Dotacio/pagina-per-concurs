@@ -1,11 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BotonReact from '../components/button.jsx';
 ---
 
 <Layout title="Hola!">
-<h1>hola</h1>
+  <BotonReact client:only="react" />
 </Layout>
-
-<style>
-
-</style>
