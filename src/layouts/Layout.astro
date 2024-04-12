@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,53 +8,37 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Parla be" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Parla be</title>
-	</head>
-	<body>
-		<nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
-			<div class="mb-2 sm:mb-0">
-			  <a href="#" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Home</a>
-			</div>
-			<div>
-			  <a href="#" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">One</a>
-			  <a href="#" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Two</a>
-			  <a href="#" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Three</a>
-			</div>
-		  </nav>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Parla be" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Parla be</title>
+  </head>
+  <body>
+    <nav
+      class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full"
+    >
+      <div class="mb-2 sm:mb-0">
+        <a
+          href="#"
+          class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
+          >Inici</a
+        >
+      </div>
+      <div>
+        <button
+          class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
+        >
+		Taula de classificació
+        </button>
+        <button
+          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Juga ara
+        </button>
+      </div>
+    </nav>
+    <slot />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
