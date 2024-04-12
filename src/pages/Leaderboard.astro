@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LeaderboardJSX from "../components/Leaderboard.jsx";
+---
+
+<Layout title="Leaderboard">
+  <main>
+    <h1
+      class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl dark:text-black"
+    >
+      Taula de classificació
+    </h1>
+    <p class="text-lg font-normal text-gray-500 lg:text-2xl dark:text-gray-400">
+      Un rànquing de les 25 persones amb la puntuació més alta
+    </p>
+    <LeaderboardJSX/>
+  </main> 
+</Layout>
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+  }
+</style>
